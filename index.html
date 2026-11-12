@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="description" content="一隅是一个关于设计、技术与日常生活的极简个人博客。" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>一隅 — 把想法，写成一页</title>
+    <script>
+      (() => {
+        const saved = localStorage.getItem('yiyu-theme')
+        const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = saved || preferred
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
